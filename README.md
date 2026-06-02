@@ -1,4 +1,4 @@
-LoL Database
+League of Legends Champions Database
 
 Un'applicazione web per esplorare e gestire i campioni di League of Legends.
 
