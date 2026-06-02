@@ -1,8 +1,8 @@
-# LoL Database
+LoL Database
 
 Un'applicazione web per esplorare e gestire i campioni di League of Legends.
 
-## Descrizione
+Descrizione
 
 **LoL Database** è un sito interattivo dove puoi:
 - Visualizzare i campioni per ruolo (Top, Jungle, Mid, Bot, Support)
@@ -12,7 +12,7 @@ Un'applicazione web per esplorare e gestire i campioni di League of Legends.
 
 L'app è costruita con Flask e utilizza un database PostgreSQL su Supabase, con API REST per l'accesso ai dati.
 
-## Tecnologie Utilizzate
+Tecnologie Utilizzate
 
 - **Backend**: Flask (Python)
 - **Database**: PostgreSQL (Supabase)
@@ -25,14 +25,14 @@ L'app è costruita con Flask e utilizza un database PostgreSQL su Supabase, con 
   - requests 2.31.0
   - python-dotenv 1.0.0
 
-## Installazione Locale
+Installazione Locale
 
-### Prerequisiti
+Prerequisiti
 - Python 3.11+
 - pip
 - Git
 
-### Setup
+Setup
 
 1. **Clona il repository**
 ```bash
@@ -70,22 +70,12 @@ python app.py
 ```
 Visita: http://localhost:5000
 
-## Deploy su Vercel
 
-L'app è già configurata per Vercel. Per eseguire il deploy:
+Sito Pubblicato
 
-1. Pusha il codice su GitHub
-2. Collega il repository a Vercel
-3. Configura le environment variables in Vercel:
-   - `SUPABASE_URL`
-   - `SUPABASE_SERVICE_ROLE_KEY`
-4. Vercel farà il deploy automaticamente
+**[LoL Database - Visita il sito](https://progetto-finale-fr-ra-ka5a.vercel.app)**
 
-## Sito Pubblicato
-
-🌐 **[LoL Database - Visita il sito](https://progetto-finale-fr-ra-ka5a.vercel.app)**
-
-## Struttura del Progetto
+Struttura del Progetto
 
 ```
 .
@@ -106,7 +96,7 @@ L'app è già configurata per Vercel. Per eseguire il deploy:
     └── style.css
 ```
 
-## Rotte API
+Rotte API
 
 | Rotta | Metodo | Descrizione |
 |-------|--------|-------------|
@@ -117,17 +107,3 @@ L'app è già configurata per Vercel. Per eseguire il deploy:
 | `/aggiungi` | GET, POST | Aggiungi campione |
 | `/elimina/<id>` | POST | Elimina campione |
 | `/health` | GET | Health check (debug) |
-
-## Note Importanti
-
-- ⚠️ Non esporre `SUPABASE_SERVICE_ROLE_KEY` nel codice client
-- 🔒 Su Supabase, usa le regole RLS (Row Level Security) per proteggere i dati
-- 📦 Il file `database.db` è locale e ignorato da Git
-
-## Autore
-
-Francesco Ratta
-
-## Licenza
-
-MIT
