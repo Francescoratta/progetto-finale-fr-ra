@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="stars-container">
+    <div class="star s1">✦</div>
+    <div class="star s2">✦</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✦</div>
+    <div class="star s5">✦</div>
+    <div class="star s6">✦</div>
+    <div class="star s7">✦</div>
+    <div class="star s8">✦</div>
+    <div class="star s9">✦</div>
+    <div class="star s10">✦</div>
+    <div class="star s11">✦</div>
+    <div class="star s12">✦</div>
+    <div class="star s13">✦</div>
+    <div class="star s14">✦</div>
+</div>
+
+<div class="home-wrapper">
+    <div class="hextech-frame">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+        
+        <div class="hero-content">
+            <h1 class="glow-title">Landa degli Evocatori</h1>
+            <div class="gold-divider">
+                <span class="diamond"></span>
+            </div>
+            <p class="subtitle">ARCHIVIO UFFICIALE DEI CAMPIONI</p>
+            <p class="description">Esplora la "lore", analizza i campioni suddivisi per corsia o registra un nuovo eroe per scendere in battaglia nei campi della giustizia.</p>
+            
+            <div class="button-box">
+                <a href="{{ url_for('roles') }}" class="btn-hextech">Scegli la tua Lane</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lol-logo-container">
+        <svg class="lol-official-logo" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#f0e6d2" />
+                    <stop offset="50%" stop-color="#c8aa6e" />
+                    <stop offset="100%" stop-color="#785a28" />
+                </linearGradient>
+                <filter id="goldGlow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <text x="50%" y="45%" text-anchor="middle" fill="url(#goldGrad)" font-family="'Cinzel', 'Times New Roman', serif" font-size="24" font-weight="bold" letter-spacing="4" filter="url(#goldGlow)">LEAGUE OF LEGENDS</text>
+            <text x="50%" y="75%" text-anchor="middle" fill="url(#goldGrad)" font-family="'Cinzel', 'Times New Roman', serif" font-size="11" font-weight="bold" letter-spacing="10">ARCHIVE</text>
+        </svg>
+    </div>
+</div>
+{% endblock %}

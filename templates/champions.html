@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="page-title">Campioni: {{ role }}</h2>
+<div class="cards-container">
+    {% for champion in champions %}
+    <div class="card" style="background-image: url('{{ champion.image_vertical }}');">
+        <div class="card-info">
+            <h3>{{ champion.name }}</h3>
+            <p>Difficoltà: {{ champion.difficulty }}</p>
+            
+            <div class="action-buttons">
+                <a href="{{ url_for('champion_detail', id=champion.id) }}" class="btn-small">Leggi Lore</a>
+                
+                {% if champion.is_custom %}
+                <form action="{{ url_for('delete_champion', id=champion.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn-small btn-delete">Elimina</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p>Nessun campione in questa lane. Aggiungine uno!</p>
+    {% endfor %}
+</div>
+{% endblock %}

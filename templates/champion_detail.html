@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="detail-container">
+    <div class="detail-banner" style="background-image: url('{{ champion.image_horizontal }}');"></div>
+    <div class="detail-text">
+        <h2>{{ champion.name }}</h2>
+        <h4 class="gold-text">Ruolo: {{ champion.role }} | Difficoltà: {{ champion.difficulty }}</h4>
+        <p class="lore-box">{{ champion.lore }}</p>
+        <a href="{{ url_for('champions_by_role', role=champion.role) }}" class="btn-gold">Torna indietro</a>
+    </div>
+</div>
+{% endblock %}

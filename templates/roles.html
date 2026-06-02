@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="page-title"> Approfondisci la tua lane</h2>
+<div class="map-wrapper">
+    <div class="rift-map">
+        <a href="{{ url_for('champions_by_role', role='Top') }}" class="map-btn lane-top">Top Lane</a>
+        <a href="{{ url_for('champions_by_role', role='Jungle') }}" class="map-btn lane-jungle">Jungle</a>
+        <a href="{{ url_for('champions_by_role', role='Mid') }}" class="map-btn lane-mid">Mid Lane</a>
+        <a href="{{ url_for('champions_by_role', role='Bot') }}" class="map-btn lane-bot">Bot Lane (ADC)</a>
+        <a href="{{ url_for('champions_by_role', role='Support') }}" class="map-btn lane-support">Support</a>
+    </div>
+</div>
+{% endblock %}

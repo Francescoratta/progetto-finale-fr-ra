@@ -1,0 +1,11 @@
+.env.local
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+*.log
+.vercel
+database.db

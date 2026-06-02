@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="page-title">Aggiungi un nuovo Campione</h2>
+<div class="form-container">
+    <form method="POST" action="{{ url_for('add_champion') }}">
+        <label for="name">Nome Campione:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="role">Ruolo (Lane):</label>
+        <select id="role" name="role" required>
+            <option value="Top">Top</option>
+            <option value="Jungle">Jungle</option>
+            <option value="Mid">Mid</option>
+            <option value="Bot">Bot</option>
+            <option value="Support">Support</option>
+        </select>
+
+        <label for="difficulty">Difficoltà:</label>
+        <select id="difficulty" name="difficulty" required>
+            <option value="Facile">Facile</option>
+            <option value="Media">Media</option>
+            <option value="Difficile">Difficile</option>
+        </select>
+
+        <label for="image_vertical">Link Immagine Verticale Card (Loading Screen URL):</label>
+        <input type="url" id="image_vertical" name="image_vertical" placeholder="https://..." required>
+
+        <label for="image_horizontal">Link Immagine Orizzontale Lore (Splash Art URL):</label>
+        <input type="url" id="image_horizontal" name="image_horizontal" placeholder="https://..." required>
+
+        <label for="lore">Lore / Storia:</label>
+        <textarea id="lore" name="lore" rows="5" required></textarea>
+
+        <button type="submit" class="btn-gold">Evoca Campione</button>
+    </form>
+</div>
+{% endblock %}
